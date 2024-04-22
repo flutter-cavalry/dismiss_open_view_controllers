@@ -1,0 +1,34 @@
+PODS:
+  - dismiss_open_view_controllers (0.0.1):
+    - Flutter
+  - file_selector_ios (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - dismiss_open_view_controllers (from `.symlinks/plugins/dismiss_open_view_controllers/ios`)
+  - file_selector_ios (from `.symlinks/plugins/file_selector_ios/ios`)
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+
+EXTERNAL SOURCES:
+  dismiss_open_view_controllers:
+    :path: ".symlinks/plugins/dismiss_open_view_controllers/ios"
+  file_selector_ios:
+    :path: ".symlinks/plugins/file_selector_ios/ios"
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+
+SPEC CHECKSUMS:
+  dismiss_open_view_controllers: 9c2f0b5836c19b147d52510098df57e03f75ccc3
+  file_selector_ios: 78baf21d03f1e37a7df97bb2494f9cd86de8fa5d
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+
+COCOAPODS: 1.15.2
