@@ -11,8 +11,11 @@ class MethodChannelDismissOpenViewControllers
   final methodChannel = const MethodChannel('dismiss_open_view_controllers');
 
   @override
-  Future<void> dismiss({required bool isAnimated}) async {
-    await methodChannel
-        .invokeMethod<void>('dismiss', {'isAnimated': isAnimated});
+  Future<void> dismiss(
+      {required bool isAnimated, bool? handlePHPickerViewController}) async {
+    await methodChannel.invokeMethod<void>('dismiss', {
+      'isAnimated': isAnimated,
+      'handlePHPickerViewController': handlePHPickerViewController ?? false
+    });
   }
 }

@@ -17,8 +17,16 @@ public class DismissOpenViewControllersPlugin: NSObject, FlutterPlugin {
         switch call.method {
         case "dismiss":
             let animated = args["isAnimated"] as! Bool
+            let handlePHPickerViewController = args["handlePHPickerViewController"] as? Bool ?? false
             
             let rvc = UIApplication.shared.findKeyWindow()?.rootViewController
+            if #available(iOS 14, *) {
+                if handlePHPickerViewController, let pickerViewController = rvc?.presentedViewController as? PHPickerViewController {
+                    weak var delegate = pickerViewController.delegate
+                    delegate?.picker(pickerViewController, didFinishPicking: [])
+                }
+            }
+            
             rvc?.dismiss(animated: animated, completion: nil)
             
             result(nil)

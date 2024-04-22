@@ -24,7 +24,8 @@ abstract class DismissOpenViewControllersPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<void> dismiss({required bool isAnimated}) {
+  Future<void> dismiss(
+      {required bool isAnimated, bool? handlePHPickerViewController}) {
     throw UnimplementedError('dismiss() has not been implemented.');
   }
 }
